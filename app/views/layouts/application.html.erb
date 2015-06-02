@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MaterialDesign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= include_gon %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+      $(document).ready(function()
+      {
+          $.material.init();
+         $("#toggleDiv").click(function ()
+          {
+            $(".dropdown-menu").slideToggle('slow');
+          });
+      });
+  </script>
+</head>
+<body>
+<div class="scrollToTop circle"><i class="icon-up-open-big"></i></div>
+<div class="page-wrapper">
+  <div class="header-container">
+    <header class="header  fixed   clearfix" >
+      <div class="slider-banner-fullscreen">
+      <div id="toggleDiv" style="padding-left: 5%;padding-right: 5%">
+        <div class="main-navigation onclick animated with-dropdown-buttons"  >
+          <div class="col-md-3" style="padding-bottom: 10px;padding-top: 5px;">
+            <h4 style="color: white">START YOUR ORDER ></h4>
+          </div>
+          <div class="col-md-3" style="padding-bottom: 10px;padding-top: 5px;">
+            <h4 style="color: white">CHOOSE LOCATION ></h4>
+          </div>
+          <div class="col-md-3" style="padding-bottom: 10px;padding-top: 5px;">
+            <h4 style="color: white">CHOOSE DISHES ></h4>
+          </div>
+          <div class="col-md-3" style="padding-bottom: 10px;padding-top: 5px;">
+            <h4 style="color: white">TRACK ORDER ></h4>
+          </div>
+        </div>
+      </div>
+        <div  class="dropdown-menu" style="width: 1370px;height:auto;top:54px;padding-left: 5%;padding-right: 5%;padding-bottom: 2%;">
+          <div class="container">
+            <div class="row">
+         <div class="col-md-12">
+           <span style="font-size: xx-large;margin-left: 35%;color: #000000">Food Delivery...ReInvented</span><br/>
+           <span style="font-size:small;margin-left: 39%;color: #dddddd">Serving from Local Restaurant at your doorstep</span>
+         </div>
+          <div class="col-md-12">
+
+            <div class="col-lg-6 col-sm-6 text-left" data-animation-effect="fadeInLeft" data-effect-delay="0">
+              <h6 class="text-center" style="color: #BBBBBB;font-size: 16px">FEATURES*</h6>
+               <p><i class="fa fa-circle" style="font-size: 8px;color: rgb(204,70,06);"></i> Minimums</p><div class="divider"></div>
+               <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Super Fast Delivery</p><div class="divider"></div>
+               <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> No Need for Menus</p><div class="divider"></div>
+               <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Order from Multiple Restaurants</p><div class="divider"></div>
+               <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Aggregated Rating & Reviews</p><div class="divider"></div>
+               <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Deals & Offers</p>
+            </div>
+            <div class="col-lg-6 col-sm-6 text-left">
+              <h6  style="color: #BBBBBB;font-size: 16px;margin-left: 16%;">INVITES</h6>
+              <div class="alert alert-success hidden" id="MessageSent">
+              We have received your message, we will contact you very soon.
+              </div>
+              <div class="alert alert-danger hidden" id="MessageNotSent">
+              Oops! Something went wrong please refresh the page and try again.
+              </div>
+              <div class="contact-form">
+              <form id="contact-form" class="margin-clear" role="form">
+              <div class="form-control-wrapper has-feedback " style="width: 50%;">
+              <label for="name"></label>
+              <input id="name" class="form-control floating-label"  type="text" placeholder="NAME*" name="name">
+
+              </div>
+              <div class="form-control-wrapper has-feedback" style="
+                      width: 50%;">
+
+              <label for="name"></label>
+              <input id="email" class="form-control floating-label"  type="email" placeholder="EMAIL-ID*" name="email">
+
+              </div>
+              <div class="form-control-wrapper has-feedback" style=" width: 50%;">
+              <label for="name"></label>
+              <input class="form-control floating-label" type="text" placeholder="CONTACT NO" id="subject" name="contact">
+
+              </div>
+              <input type="submit" value="Submit" class="submit-button btn btn-default" >
+              <input type="button" value="Cancel" class="btn btn-default">
+              </form>
+              </div>
+            </div>
+        </div>
+          </div>
+          </div>
+          </div>
+        <div  class="dropdown-menu" style="width: 1370px;height:auto;top:54px;padding-left: 5%;padding-right: 5%;padding-bottom: 2%;visibility: hidden">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <span style="font-size: xx-large;margin-left: 35%;color: #000000">Food Delivery...ReInvented</span><br/>
+                <span style="font-size:small;margin-left: 39%;color: #dddddd">Serving from Local Restaurant at your doorstep</span>
+              </div>
+              <div class="col-md-12">
+                <h6 class="text-center" style="color: #BBBBBB;font-size: 16px">FEATURES*</h6>
+                <div class="col-lg-6 col-sm-6 text-left" data-animation-effect="fadeInLeft" data-effect-delay="0">
+                  <p><i class="fa fa-circle" style="font-size: 8px;color: rgb(204,70,06);"></i> Minimums</p>
+                  <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Super Fast Delivery</p>
+                  <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> No Need for Menus</p>
+                </div><div class="col-lg-6 col-sm-6 text-left" data-animation-effect="fadeInRight" data-effect-delay="0">
+                  <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Order from Multiple Restaurants
+                  <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Aggregated Rating & Reviews</p>
+                  <p><i class="fa fa-circle"  style="font-size: 8px;color: rgb(204,70,06);"></i> Deals & Offers</p>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="divider"></div>
+                  <h6 class="text-center" style="color: #BBBBBB;font-size: 16px;">INVITES</h6>
+                  <div class="alert alert-success hidden" id="MessageSent">
+                  We have received your message, we will contact you very soon.
+                  </div>
+                  <div class="alert alert-danger hidden" id="MessageNotSent">
+                  Oops! Something went wrong please refresh the page and try again.
+                  </div>
+                  <div class="contact-form">
+                  <form id="contact-form" class="margin-clear" role="form">
+                  <div class="form-control-wrapper has-feedback " style="display: inline-block;width: 28%;">
+                  <label for="name"></label>
+                  <input id="name" class="form-control floating-label"  type="text" placeholder="NAME*" name="name">
+
+                  </div>
+                  <div class="form-control-wrapper has-feedback" style="display: inline-block;width: 28%;">
+
+                  <label for="name"></label>
+                  <input id="email" class="form-control floating-label"  type="email" placeholder="EMAIL-ID*" name="email">
+
+                  </div>
+                  <div class="form-control-wrapper has-feedback" style=" display: inline-block;width: 28%;">
+                  <label for="name"></label>
+                  <input class="form-control floating-label" type="text" placeholder="CONTACT NO" id="subject" name="contact">
+
+                  </div>
+                  <input type="submit" value="Submit" class="submit-button btn btn-default" style="margin-top: -2px;">
+                  <input type="button" value="Cancel" class="btn btn-default" style="margin-top: -2px;">
+                  </form>
+                  </div>
+<!---->
+                  </div>
+                </div>
+
+                <!--<div>-->
+                <!--<span style="font-size: xx-large;margin-left: 35%;color: #000000">INVITATION ONLY</span>-->
+                <!--<div class="divider"></div>-->
+                <!--<div class="alert alert-success hidden" id="MessageSent">-->
+                <!--We have received your message, we will contact you very soon.-->
+                <!--</div>-->
+                <!--<div class="alert alert-danger hidden" id="MessageNotSent">-->
+                <!--Oops! Something went wrong please refresh the page and try again.-->
+                <!--</div>-->
+                <!--<div class="contact-form">-->
+                <!--<form id="contact-form" class="margin-clear" role="form">-->
+                <!--<div class="form-control-wrapper has-feedback " style="display: inline-block;width: 25%;">-->
+                <!--<label for="name"></label>-->
+                <!--<input id="name" class="form-control floating-label"  type="text" placeholder="NAME*" name="name">-->
+
+                <!--</div>-->
+                <!--<div class="form-control-wrapper has-feedback" style="display: inline-block;
+                        width: 25%;"> -->
+
+                <!--<label for="name"></label>-->
+                <!--<input id="email" class="form-control floating-label"  type="email" placeholder="EMAIL-ID*" name="email">-->
+
+                <!--</div>-->
+                <!--<div class="form-control-wrapper has-feedback" style=" display: inline-block;width: 25%;">-->
+                <!--<label for="name"></label>-->
+                <!--<input class="form-control floating-label" type="text" placeholder="CONTACT NO" id="subject" name="contact">-->
+
+                <!--</div>-->
+                <!--<input type="submit" value="Submit" class="submit-button btn btn-default" style="margin-top: -2px;">-->
+                <!--<input type="button" value="Cancel" class="btn btn-default" style="margin-top: -2px;">-->
+                <!--</form>-->
+                <!--</div>-->
+
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+     </div>
+    </header>
+    </div>
+<%= yield %>
+</div>
+</body>
+</html>
