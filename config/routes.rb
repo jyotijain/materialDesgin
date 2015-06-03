@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cart/index'
+
   root 'welcome#index'
   match"welcome/sendMail" , :via=>[:get,:post]
 
